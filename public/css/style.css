@@ -196,6 +196,9 @@ body {
 .top_layer p {
   color: #fff;
   font-weight: 300;
+  font-size: 1.2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .main_layer {

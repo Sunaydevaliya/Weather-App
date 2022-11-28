@@ -5,6 +5,36 @@ const city_name = document.getElementById('city_name');
 const temp_real_val = document.getElementById('temp_real_val');
 const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.middle_layer');
+const currentday = document.getElementById("day");
+const currentdate = document.getElementById("today_date");
+
+
+
+var day = new Date();
+    var weekdays = new Array(7);
+    weekdays[0] = "Sunday";
+    weekdays[1] = "Monday";
+    weekdays[2] = "Tuesday";
+    weekdays[3] = "Wednesday";
+    weekdays[4] = "Thursday";
+    weekdays[5] = "Friday";
+    weekdays[6] = "Saturday";
+    var myday = weekdays[day.getDay()];
+    currentday.innerHTML = myday;
+
+// const date = new Date();
+
+let cday = day.getDate();
+// let month = date.getMonth() + 1;
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let cmonth = month[day.getMonth()];
+
+currentdate.innerHTML = `${cday}-${cmonth}`;
+
+
+
+
+
 
 const getInfo = async(event) => {
     event.preventDefault();
